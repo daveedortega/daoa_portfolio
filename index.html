@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>David A. Ortega | Portfolio</title>
+  <meta name="description" content="One-sentence description for search results and link previews.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!--
+  HOW THIS TEMPLATE WORKS
+  1. The top-right index builds itself. Any element with data-nav="Label" gets an entry.
+     Add data-nav-level="2" to nest it under the section above (use for projects).
+  2. Every project is ONE of three types. Copy the block you need:
+       A) LINKED FILE: card that links out (paper, zine, Shiny app, qmd site)
+       B) IFRAME:      page embedded in place (Leaflet maps, HTML charts)
+       C) TEXT:        words only
+  3. Give every section a unique id (it becomes the #link in the index).
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="#top">David A. Ortega.</a>
+
+    <nav class="index" aria-label="Page index">
+      <button class="index-toggle" aria-expanded="false" aria-controls="index-panel">
+        Index
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <ul class="index-panel" id="index-panel"><!-- filled by script --></ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  
+  <section class="hero" id="top">
+  <div class="wrap">
+
+    <div class="hero-grid">
+      <div>
+        <h1>David A. Ortega - Portfolio.</h1>
+        <p>Economist with 4+ years of experience across the public and private sectors, using data analysis and strategy to understand and improve economic and financial systems. 
+        Currently pursuing an MPA in International Finance and Economic Policy Management at Columbia SIPA in New York. 
+        I’m interested in roles that combine rigorous analysis, strategic thinking, and clear communication of the findings.</p>
+      </div>
+      <img class="avatar" src="images/me.png" width="600" height="600" alt="David Ortega, smiling, outdoors">
+    </div>
+
+    <div class="pill-links">
+        <a class="pill primary" href="#projects">See the work</a>
+        <a class="pill" href="https://www.linkedin.com/in/daveedortega/" target="_blank">LinkedIn</a>
+        <a class="pill" href="https://github.com/daveedortega" target="_blank">GitHub</a>
+        <a class="pill" href="david_ortega_nyc_cv.pdf" target="_blank">CV</a>
+        <a class="pill primary" href="mailto:david.ortega@columbia.edu">Email me</a>
+    </div>
+
+  </div>
+</section>
+
+  <!-- PROJECTS -->
+  <section class="block" id="projects" data-nav="Work">
+    <div class="wrap">
+      <h2>Selected work</h2>
+      <p class="section-lede">This is a short selection of my work showcasing primarily visualizations and analytics.</p>
+
+      
+      
+      <!-- ===== TYPE D: IMAGE CAROUSEL (click to expand) ===== -->
+      <article class="project" id="project-datavis" data-nav="Data Visualizations" data-nav-level="2">
+        <p class="tags">Data Viz · Mexico City · 2025</p>
+        <h3>Dataviz design.</h3>
+        <p>Showcase of some insights data revealed on Mexico City's Public transit.</p>
+        <div class="carousel" aria-label="Photo series">
+          <button class="carousel-btn prev" type="button" aria-label="Scroll left">&#8249;</button>
+          <div class="carousel-track">
+            <!-- One <figure> per image. Copy, paste, edit src and alt. -->
+              <figure class="slide">
+                <button type="button" aria-label="Expand image">
+                  <img src="images/map_1.png" width="1600" height="1067" alt="Map showing stations with highest ticket sales." loading="lazy">
+                </button>
+              </figure>
+              <figure class="slide">
+                <button type="button" aria-label="Expand image">
+                  <img src="images/plt_1.png" width="1067" height="1600" alt="Increase in subway system usage." loading="lazy">
+                </button>
+              </figure>
+              <figure class="slide">
+                <button type="button" aria-label="Expand image">
+                  <img src="images/plt_2.png" width="1600" height="1067" alt="The subway is the main public transit system in the city. " loading="lazy">
+                </button>
+              </figure>
+              <figure class="slide">
+                <button type="button" aria-label="Expand image">
+                  <img src="images/plt_3.png" width="1600" height="1067" alt="Alternative systems have had quick adoption." loading="lazy">
+                </button>
+              </figure>            
+            </div>
+            <button class="carousel-btn next" type="button" aria-label="Scroll right">&#8250;</button>
+          </div>
+        </article>
+        
+        <!-- ===== TYPE B: IFRAME ===== -->
+        <article class="project" id="project-maps" data-nav="Leaflet maps" data-nav-level="2">
+          <p class="tags">Leaflet · Interactive maps</p>
+          <h3>Subset of quick Leaflet interactive maps</h3>
+          <p>Topics ranging from electoral to gas prices.</p>
+          
+          <div class="embed-grid">
+            
+            <figure class="embed-item">
+              <iframe class="embed-frame"
+              src="https://rawcdn.githack.com/daveedortega/mapas_qro/refs/heads/main/output/mapa_neza_24/neza_muni_24_priori.html"
+              title="Neza municipal election 2024 map"
+              allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+              <figcaption>
+                Neza municipal election 2024 ·
+                <a href="https://rawcdn.githack.com/daveedortega/mapas_qro/refs/heads/main/output/mapa_neza_24/neza_muni_24_priori.html" target="_blank" rel="noopener">Open full size</a>
+              </figcaption>
+            </figure>
+            
+            <figure class="embed-item">
+              <iframe class="embed-frame"
+              src="https://rawcdn.githack.com/daveedortega/cdmx_leaflet_generic/refs/heads/main/output/leaflet_1.html"
+              title="Ticket Sale by Station for CDMX Subway"
+              allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+              <figcaption>
+                Dynamic CDMX Subway System Map·
+                <a href="https://rawcdn.githack.com/daveedortega/cdmx_leaflet_generic/refs/heads/main/output/leaflet_1.html" target="_blank" rel="noopener">Open full size</a>
+              </figcaption>
+            </figure>
+            
+            <figure class="embed-item">
+              <iframe class="embed-frame"
+              src="https://raw.githack.com/daveedortega/mapa_precios_gas/refs/heads/main/output/map_precios_02012025.html"
+              title="Gas Sale's data per municipality."
+              allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+              <figcaption>
+                Bands for gas prices per municipality. 
+                <a href="https://raw.githack.com/daveedortega/mapa_precios_gas/refs/heads/main/output/map_precios_02012025.html" target="_blank" rel="noopener">Open full size</a>
+              </figcaption>
+            </figure>
+            
+          </div>
+        </article>
+        
+        <!-- ===== TYPE C: TEXT ===== -->
+        <article class="project" id="project-paper" data-nav="Research paper" data-nav-level="2">
+          <p class="tags">Research · 2025</p>
+          <h3>Externalities of Mexico City’s 2018–2024 Mobility Program</h3>
+  
+          <div class="split">
+  
+            <div class="prose">
+              <p>Between 2018 and 2024 Mexico City experienced a surge of public investment in much-needed public transportation infrastructure. 
+              In 2018, the newly elected government pushed to diversify the network by investing in new bus lines, cable cars and trolleys, primarily located in historically marginalized neighborhoods; 
+              it also engaged in costly closings of the subway lines because of maintenance. Measuring the impact of public transit infrastructure is complex. 
+              Usually, it is not possible to isolate its effect on a single variable; most of the literature points to the effect in terms of a reduction of commute times and self-reported well-being, but causal inference on other variables is hardly tested. 
+              The opening and closing of public transit lines constitute a unique setting to assess the impact of public transit on other variables. 
+              We use a Difference-inDifference design to measure the impact on the affected treated neighborhoods on reported road incidents. 
+              We find robust evidence that subway line closures increase road incidents by 20%. 
+              These results remain consistent when using a matching design to reduce heterogeneity in the control group. 
+              Both line closures and openings show statistically significant effects, with openings reducing total road incidents by 15% and closures increasing them by 11%. 
+              This work adds to the existing literature on public transit externalities.</p>
+            </div>
+  
+            <a class="paper-cover" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7631339" target="_blank" rel="noopener">
+              <img src="images/paper_cover.png" width="900" height="1165"
+                  alt="First page of the paper on Mexico City’s mobility program" loading="lazy">
+              <span>Read the paper on SSRN</span>
+            </a>
+  
+          </div>
+        </article>
+
+        <!-- ===== TYPE B: IFRAME ===== -->
+        <article class="project" id="project-rtutorial" data-nav="R Tutorial" data-nav-level="2">
+          <p class="tags">R Tutorial · 2025</p>
+          <h3>R Tutorial PPT in QMD</h3>
+          <p>Made for absolute beguinners, goes over key software aspects.</p>
+        <div class="embed" style="--ratio: 16 / 10;">
+          <iframe allowfullscreen allow="autoplay; fullscreen; clipboard-write" scrolling="no" style="width: 100%; height: 400px; border: 1px solid lightgray;" src="https://daveedortega.github.io/r_tutorial/#/title-slide"></iframe>
+          <p class="embed-note">Not loading? <a href="https://daveedortega.github.io/r_tutorial/#/title-slide" target="_blank" rel="noopener">Open it in its own tab</a>.</p>
+        </div>
+      </article>
+        
+
+        <!-- ===== TYPE B: IFRAME ===== -->
+        <article class="project" id="project-streetphoto" data-nav="Street Photography" data-nav-level="2">
+          <p class="tags">Amateur Protography · 2023 - 2025</p>
+          <h3>CDMX Street Photography</h3>
+          <p>Amateur project of CDMX street photography.</p>
+        <div class="embed" style="--ratio: 16 / 10;">
+          <iframe allowfullscreen allow="autoplay; fullscreen; clipboard-write" scrolling="no" style="width: 100%; height: 400px; border: 1px solid lightgray;" src="https://heyzine.com/flip-book/e051030c4a.html"></iframe>
+          <p class="embed-note">Not loading? <a href="https://heyzine.com/flip-book/e051030c4a.html" target="_blank" rel="noopener">Open it in its own tab</a>.</p>
+        </div>
+      </article>
+
+
+      <!-- Copy any block above and paste it here for the next project -->
+    </div>
+  </section>
+
+  <!-- ABOUT / CV / LINKS (tabs) -->
+  <section class="block" id="about" data-nav="About">
+    <div class="wrap">
+      <h2>About</h2>
+
+      <div class="tabs">
+        <div class="tablist" role="tablist" aria-label="About sections">
+          <button class="tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true">About</button>
+          <button class="tab" role="tab" id="tab-cv" aria-controls="panel-cv" aria-selected="false" tabindex="-1">CV</button>
+          <button class="tab" role="tab" id="tab-links" aria-controls="panel-links" aria-selected="false" tabindex="-1">Contact</button>
+          <button class="tab" role="tab" id="tab-other" aria-controls="panel-other" aria-selected="false" tabindex="-1">Other</button>
+          <span class="tab-indicator" aria-hidden="true"></span>
+        </div>
+
+        <div class="tabpanel prose" role="tabpanel" id="panel-about" aria-labelledby="tab-about">
+          <p>Economist and data analyst based in New York, pursuing an MPA at Columbia SIPA. 
+            I connect data analysis, visualization, and strategy to understand how economic and financial systems work and how to improve them. 
+            I’m interested in roles where that thinking is applied to markets, infrastructure, and public-interest questions, and where the findings need to be communicated clearly.</p>
+        </div>
+
+        <div class="tabpanel" role="tabpanel" id="panel-cv" aria-labelledby="tab-cv" hidden>
+          <div class="entry">
+            <h3>Director of Analytics</h3>
+            <p class="when">Mexico City DA, 2025-2026</p>
+            <p>Led data strategy for the city’s criminal policy and built new data pipelines and application systems.</p>
+          </div>
+          <div class="entry">
+            <h3>Director of Analytics</h3>
+            <p class="when">Digital Agency for Digital Transformation and Telecom, 2024-2025</p>
+            <p>Established the president’s data consultancy office, advising on issues from tax collection estimates to water supply. </p>
+          </div>
+          <div class="entry">
+            <h3>Data Specialist</h3>
+            <p class="when">Banorte, 2023-2024</p>
+            <p>Provided data analysis for the Strategy and Product division of Mexico’s second-largest bank.</p>
+          </div>
+          <div class="entry">
+            <h3>Analist</h3>
+            <p class="when">Digital Agency for Public Innovation, 2021-2022</p>
+            <p>Delivered data analysis for public-sector consulting projects.</p>
+          </div>                              
+          <!-- Copy .entry for each item -->
+          <p><a class="pill" href="david_ortega_nyc_cv.pdf">Download CV (PDF)</a></p>
+        </div>
+
+        <div class="tabpanel" role="tabpanel" id="panel-links" aria-labelledby="tab-links" hidden>
+          <div class="pill-links" style="margin-top:0">
+            <a class="pill primary" href="mailto:david.ortega@columbia.edu">Email me</a>
+            <a class="pill" href="https://www.linkedin.com/in/daveedortega" target="_blank">LinkedIn</a>
+            <a class="pill" href="https://github.com/daveedortega" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="tabpanel" role="tabpanel" id="panel-other" aria-labelledby="tab-other" hidden>
+            <div class="pill-links" style="margin-top:0">
+            <a class="pill" href="https://daveedortega.github.io/claude_battleship/main.html" target="_blank">Battleship!</a>
+            <a class="pill" href="https://open.spotify.com/playlist/20OSXdfOf5FcJfU74N57sg?si=4800b13bc0c24dad" target="_blank">Mexican Music Playlist!</a>
+            <a class="pill" href="https://letterboxd.com/daveedortega/" target="_blank">Letterboxd</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Full-size image viewer, shared by every carousel -->
+<dialog class="lightbox" aria-label="Image viewer">
+  <button class="lb-close" type="button" aria-label="Close">&times;</button>
+  <button class="lb-nav lb-prev" type="button" aria-label="Previous image">&#8249;</button>
+  <figure>
+    <img alt="">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lb-nav lb-next" type="button" aria-label="Next image">&#8250;</button>
+</dialog>
+ 
+<script>
+(() => {
+  /* ---------- Index: built from every [data-nav] element ---------- */
+  const toggle = document.querySelector('.index-toggle');
+  const panel  = document.getElementById('index-panel');
+  const targets = [...document.querySelectorAll('[data-nav]')];
+ 
+  panel.innerHTML = targets.map(el => {
+    const sub = el.dataset.navLevel === '2' ? ' class="sub"' : '';
+    return `<li${sub}><a href="#${el.id}">${el.dataset.nav}</a></li>`;
+  }).join('');
+ 
+  const setOpen = open => {
+    panel.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+  };
+  toggle.addEventListener('click', e => { e.stopPropagation(); setOpen(!panel.classList.contains('open')); });
+  panel.addEventListener('click', e => { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('click', e => { if (!e.target.closest('.index')) setOpen(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && panel.classList.contains('open')) { setOpen(false); toggle.focus(); } });
+ 
+  /* Highlight the entry for the section currently in view */
+  const links = new Map([...panel.querySelectorAll('a')].map(a => [a.getAttribute('href').slice(1), a]));
+  const seen = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        links.forEach(a => a.classList.remove('current'));
+        links.get(en.target.id)?.classList.add('current');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  targets.forEach(el => seen.observe(el));
+ 
+  /* ---------- Image carousels + lightbox ---------- */
+  const dlg = document.querySelector('.lightbox');
+  const lbImg = dlg.querySelector('img');
+  const lbCap = dlg.querySelector('figcaption');
+  let set = [], pos = 0;
+ 
+  const show = i => {
+    pos = (i + set.length) % set.length;
+    const img = set[pos];
+    lbImg.src = img.dataset.full || img.currentSrc || img.src;  // full-size file if provided
+    lbImg.alt = img.alt;
+    lbCap.textContent = img.alt;
+  };
+ 
+  document.querySelectorAll('.carousel').forEach(c => {
+    const track = c.querySelector('.carousel-track');
+    const imgs = [...c.querySelectorAll('.slide img')];
+    imgs.forEach((img, i) => img.closest('button').addEventListener('click', () => {
+      set = imgs; show(i); dlg.showModal();
+    }));
+    c.querySelector('.carousel-btn.prev').addEventListener('click', () =>
+      track.scrollBy({ left: -track.clientWidth * 0.8, behavior: 'smooth' }));
+    c.querySelector('.carousel-btn.next').addEventListener('click', () =>
+      track.scrollBy({ left: track.clientWidth * 0.8, behavior: 'smooth' }));
+  });
+ 
+  dlg.querySelector('.lb-close').addEventListener('click', () => dlg.close());
+  dlg.querySelector('.lb-prev').addEventListener('click', () => show(pos - 1));
+  dlg.querySelector('.lb-next').addEventListener('click', () => show(pos + 1));
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });  // click outside the image
+  dlg.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') show(pos - 1);
+    if (e.key === 'ArrowRight') show(pos + 1);
+  });
+  dlg.addEventListener('close', () => lbImg.removeAttribute('src'));
+ 
+  /* ---------- Tabs ---------- */
+  document.querySelectorAll('.tabs').forEach(group => {
+    const tabs = [...group.querySelectorAll('[role="tab"]')];
+    const indicator = group.querySelector('.tab-indicator');
+ 
+    const moveIndicator = tab => {
+      indicator.style.setProperty('--x', tab.offsetLeft + 'px');
+      indicator.style.setProperty('--w', tab.offsetWidth + 'px');
+    };
+    const select = tab => {
+      tabs.forEach(t => {
+        const on = t === tab;
+        t.setAttribute('aria-selected', on);
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+      moveIndicator(tab);
+    };
+ 
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => select(tab));
+      tab.addEventListener('keydown', e => {
+        const next = { ArrowRight: i + 1, ArrowLeft: i - 1 }[e.key];
+        if (next === undefined) return;
+        const t = tabs[(next + tabs.length) % tabs.length];
+        t.focus(); select(t);
+      });
+    });
+    select(tabs.find(t => t.getAttribute('aria-selected') === 'true') || tabs[0]);
+    addEventListener('resize', () => moveIndicator(tabs.find(t => t.getAttribute('aria-selected') === 'true')));
+  });
+})();
+</script>
+</body>
+</html>
